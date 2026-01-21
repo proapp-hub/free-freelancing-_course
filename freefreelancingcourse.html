@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Canva Premium Access</title>
+
+<style>
+body{
+  margin:0;
+  background:#f2f2f2;
+  font-family: Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+.poster{
+  width:380px;
+  background:#ffffff;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+.logo{
+  font-size:36px;
+  font-weight:bold;
+  color:#7b2cff;
+}
+.logo span{
+  background:#7b2cff;
+  color:#fff;
+  padding:4px 8px;
+  font-size:14px;
+  border-radius:6px;
+  margin-left:6px;
+}
+.title{
+  font-size:34px;
+  color:#16a34a;
+  font-weight:800;
+  margin:10px 0;
+}
+.sub{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.list{
+  font-size:15px;
+  line-height:1.6;
+}
+.list li{
+  margin-bottom:6px;
+}
+.badge{
+  background:#22c55e;
+  color:#fff;
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+  margin:10px 0;
+}
+.steps{
+  margin-top:10px;
+  font-weight:bold;
+  color:#dc2626;
+}
+button{
+  width:100%;
+  margin-top:15px;
+  background:#7b2cff;
+  color:#fff;
+  border:none;
+  padding:14px;
+  font-size:18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.note{
+  font-size:12px;
+  color:#555;
+  margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+  <div class="logo">Canva <span>PRO</span></div>
+
+  <div class="title">একদম ফ্রি!</div>
+
+  <div class="sub">সাথে যা যা পাবেন:</div>
+
+  <ul class="list">
+    <li>✔ ফ্রি WhatsApp মার্কেটিং সফটওয়্যার</li>
+    <li>✔ ৫০০+ বাংলা প্রিমিয়াম ফন্ট</li>
+    <li>✔ 1100+ English Premium Fonts</li>
+    <li>✔ Photoshop CC (2019–2022)</li>
+    <li>✔ Illustrator CC (2019–2022)</li>
+    <li>✔ Microsoft Office (2016–2021)</li>
+    <li>✔ Icons, Mockups</li>
+    <li>✔ 100+ মিনিটের ট্রেনিং ভিডিও</li>
+    <li>✔ লাইফটাইম এক্সেস গাইড</li>
+  </ul>
+
+  <div class="badge">৭ মাসের জন্য</div>
+
+  <div id="stepText" class="steps">
+    10 steps remaining
+  </div>
+
+  <button onclick="nextStep()">Free Access নিন</button>
+
+  <div class="note">
+    * Official & Safe Access Method
+  </div>
+
+</div>
+
+<script>
+let steps = 10;
+
+/* ===========================
+   🔗 DIRECT LINK SLOTS (৫টা)
+   এখানে তোমার link বসাবে
+=========================== */
+
+const directLinks = [
+  "LINK_SLOT_1_HERE", // click 5
+  "LINK_SLOT_2_HERE", // click 6
+  "LINK_SLOT_3_HERE", // click 7
+  "LINK_SLOT_4_HERE", // click 8
+  "LINK_SLOT_5_HERE"  // click 9
+];
+
+// Final Telegram Link
+const telegramLink = "https://t.me/CanvaPr0Free";
+
+function nextStep(){
+  steps--;
+  document.getElementById("stepText").innerText =
+    steps + " steps remaining";
+
+  // steps 5–9 → different direct links
+  if(steps <= 5 && steps >= 1){
+    const index = 5 - steps; // maps 5→0, 4→1, 3→2, 2→3, 1→4
+    if(directLinks[index] && directLinks[index] !== ""){
+      window.location.href = directLinks[index];
+    }
+  }
+
+  // Final step → Telegram
+  if(steps === 0){
+    window.location.href = telegramLink;
+  }
+}
+</script>
+
+</body>
+</html>
